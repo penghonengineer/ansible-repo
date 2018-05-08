@@ -19,6 +19,6 @@
         hostname: "{{ hostname }}"
         provider:
           user: admin
-          server: "{{ ansible_hostname }}'
+          server: "{{ ansible_hostname }}"
           password: "{{ bigip_admin_credentials }}"
           validate_certs: no
