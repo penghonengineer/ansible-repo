@@ -1,4 +1,4 @@
---
+---
 
 - name: Testing importing group and host vars via Tower
   hosts: all
