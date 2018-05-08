@@ -13,13 +13,12 @@
           3362303131333634650a396439343361333331383831313665656166336635653931653831366237
           6333
 
-  environment:
-    F5_SERVER: "{{ ansible_host }}"
-    F5_USER: "admin"
-    F5_PASSWORD: "{{ bigip_admin_credentials }}"
-    F5_VALIDATE_CERTS: no
-
   tasks:
     - name: Setting the hostname of the target BIGIP
       bigip_hostname:
         hostname: "{{ hostname }}"
+        provider:
+          user: admin
+          server: "{{ ansible_hostname }}'
+          password: "{{ bigip_admin_credentials }}"
+          validate_certs: no
